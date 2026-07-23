@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snowtalk Helmet - Stay Connected</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Box Icon Link for Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>  
+    <!-- Header & Navbar Section -->
+    <header>
+      <nav>
+        <div class="nav_logo">
+          <a href="#">
+            <img src="front.png" alt="Helmet Logo" />
+            <h2>SNOWTALK HELMET</h2>
+          </a>
+        </div>
+
+        <input type="checkbox" id="click" />
+        <label for="click">
+          <i class="menu_btn bx bx-menu"></i>
+          <i class="close_btn bx bx-x"></i>
+        </label>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#color">Color</a></li>
+          <li><a href="#views">Product View</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero_section">
+      <div class="section_container">
+        <div class="hero_container">
+          <div class="text_section">
+            <h2>Ride Hard.<br>Stay Connected.</h2>
+            <p>
+              Engineered for maximum safety and ultimate comfort. Built-in Bluetooth controls so you never miss a beat on the mountain.
+            </p>
+
+            <div class="hero_section_button">
+              <button class="button">Buy Now!</button>
+              <span class="price">$0.00</span>
+            </div>
+
+            <!-- Feature Badges Section -->
+            <div class="feature-badges">
+              <div class="badge-item">
+                <span class="badge-icon">🛡️</span>
+                <span>Safety Certified</span>
+              </div>
+              <div class="badge-item">
+                <span class="badge-icon">🔋</span>
+                <span>20h Battery</span>
+              </div>
+              <div class="badge-item">
+                <span class="badge-icon">📶</span>
+                <span>Bluetooth 5.3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about_us" id="about">
+      <div class="section_container">
+        <div class="about_container">
+          <div class="text_section">
+            <h2 class="section_title">About Snowtalk</h2>
+            <p>
+              Built for the extreme snow-capped mountains, Snowtalk is an integrated intercom snowboard helmet designed so you can stay connected with your crew right out of the box. Combining cutting-edge safety with seamless technology, we ensure you never miss a beat while carving down the slopes.
+            </p>
+            <div class="feature-badges" style="margin-top: 20px;">
+              <div class="badge-item"><span>🛡️</span> <span>Safety Certified</span></div>
+              <div class="badge-item"><span>📶</span> <span>Group Intercom (Up to 6 Riders)</span></div>
+              <div class="badge-item"><span>🔋</span> <span>12h Battery Life</span></div>
+            </div>
+          </div>
+          <div class="image_section">
+            <img src="front.png" alt="Snowtalk Helmet Features">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Options / Products Section -->
+    <section class="colors_section" id="color">
+      <div class="section_container">
+        <h2 class="section_title">Choose Your Color</h2>
+        <div class="color_grid">
+          <div class="color_card">
+            <div class="helmet_image">
+              <img src="black.png" alt="Matte Black Snowtalk Helmet">
+            </div>
+            <h3>Matte Black</h3>
+            <p>Sleek, stealthy finish designed for the modern mountain rider.</p>
+          </div>
+          <div class="color_card">
+            <div class="helmet_image">
+              <img src="white.png" alt="White Snowtalk Helmet">
+            </div>
+            <h3>Alpine White</h3>
+            <p>Clean, high-visibility look inspired by snowy peak summits.</p>
+          </div>
+          <div class="color_card">
+            <div class="helmet_image">
+              <img src="matte.png" alt="Sand Snowtalk Helmet">
+            </div>
+            <h3>Desert Sand</h3>
+            <p>Earthy, tactical aesthetic that stands out on the slopes.</p>
+          </div>
+          <div class="color_card">
+            <div class="helmet_image">
+              <img src="navy.png" alt="Navy Snowtalk Helmet">
+            </div>
+            <h3>Midnight Navy</h3>
+            <p>Deep blue shade offering a cool and premium alpine style.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Views Section -->
+    <section class="product_views_section" id="views">
+      <div class="section_container">
+        <h2 class="section_title">Product Views</h2>
+        <p class="section_subtitle">Explore every detail from different angles</p>
+
+        <div class="views_container">
+          <div class="view_display_box">
+            <img id="active-helmet-img" src="front.png" alt="Snowtalk Helmet View">
+            <div id="view-description" class="view_caption">Front View: Sleek design featuring built-in visor and easy-access control buttons.</div>
+          </div>
+
+          <div class="view_buttons_list">
+            <button class="view_tab active" onclick="changeView('front.png', 'Front View: Sleek design featuring built-in visor and easy-access control buttons.', this)">Front View</button>
+            <button class="view_tab" onclick="changeView('side.png', 'Side View: Showcasing the integrated Bluetooth module and antenna layout.', this)">Side View</button>
+            <button class="view_tab" onclick="changeView('back.png', 'Back View: Ergonomic rear structure with ventilation ports and retention dial.', this)">Back View</button>
+            <button class="view_tab" onclick="changeView('top.png', 'Top View: Aerodynamic shell design equipped with strategic airflow vents.', this)">Top View</button>
+            <button class="view_tab" onclick="changeView('bottom.png', 'Inside View: Premium comfort liner, HD stereo speakers, and boom microphone.', this)">Inside View</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why_us_section" id="why">
+      <div class="section_container">
+        <h2 class="section_title">Why Choose Snowtalk?</h2>
+        <p class="section_subtitle">Engineered to give you the ultimate edge on every descent.</p>
+
+        <div class="why_grid">
+          <div class="why_card">
+            <div class="why_icon">📶</div>
+            <h3>Seamless Group Intercom</h3>
+            <p>Stay connected with up to 6 riders simultaneously with a crystal-clear range of up to 1.5 km.</p>
+          </div>
+          <div class="why_card">
+            <div class="why_icon">🔋</div>
+            <h3>All-Day Power</h3>
+            <p>Enjoy up to 12 hours of continuous talk time and music playback on a single USB-C charge.</p>
+          </div>
+          <div class="why_card">
+            <div class="why_icon">❄️</div>
+            <h3>All-Weather Build</h3>
+            <p>Expertly built to handle extreme snow, howling winds, and heavy moisture on the slopes.</p>
+          </div>
+          <div class="why_card">
+            <div class="why_icon">🛡️</div>
+            <h3>Uncompromised Safety</h3>
+            <p>Certified impact protection paired with built-in HD stereo speakers and a noise-canceling mic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact_section" id="contact">
+      <div class="section_container">
+        <h2 class="section_title">Get in Touch</h2>
+        <p class="section_subtitle">Have questions about our snow helmets? Send us a message!</p>
+
+        <div class="contact_wrapper">
+          <div class="contact_info">
+            <h3>Snowtalk Support</h3>
+            <p>Our team of riders and experts are ready to help you gear up for the mountains.</p>
+            <div class="info_item">
+              <span>📍</span> <span>Sibul Springs, San Miguel, Bulacan, Philippines.</span>
+            </div>
+            <div class="info_item">
+              <span>💌</span> <span>cyrilquilit@gmail.com</span>
+            </div>
+            <div class="info_item">
+              <span>📞</span> <span>(+63)9293931936</span>
+            </div>
+          </div>
+
+          <form class="contact_form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+            <div class="form_group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form_group">
+              <input type="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form_group">
+              <textarea rows="5" placeholder="Your Message..." required></textarea>
+            </div>
+            <button type="submit" class="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="section_container">
+        <div class="footer_section">
+          <div class="footer_logo">
+            <a href="index.html">
+              <img src="front.png" alt="Helmet Logo" />
+              <h2>SNOWTALK HELMET</h2>
+            </a>
+          </div>
+
+          <div class="useful_links">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#color">Colors</a></li>
+              <li><a href="#views">Product Views</a></li>
+              <li><a href="#why">Why Us</a></li>  
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="contact_us">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <i class="bx bx-current-location"></i>
+                <span>Sibul Springs, San Miguel, Bulacan, Philippines.</span>
+              </li>
+              <li>
+                <i class="bx bxs-phone-call"></i> <span>(+63)9293931936</span>
+              </li>
+              <li>
+                <i class="bx bxs-time-five"></i>
+                <span>Mon-Sun : 10:00 AM - 7:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="follow_us">
+            <h3>Follow</h3>
+            <a href="https://www.facebook.com/cycycycycycy18" target="_blank">
+            <i class="bx bxl-facebook-circle"></i></a>
+            <a href="https://www.instagram.com/_cyrilkulit_/" target="_blank">
+            <i class="bx bxl-instagram-alt"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function changeView(imageSrc, descriptionText, buttonElement) {
+        const helmetImg = document.getElementById('active-helmet-img');
+        helmetImg.style.opacity = 0; 
+        setTimeout(() => {
+          helmetImg.src = imageSrc;
+          helmetImg.style.opacity = 1;
+        }, 150);
+
+        document.getElementById('view-description').innerText = descriptionText;
+
+        const buttons = document.querySelectorAll('.view_tab');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        buttonElement.classList.add('active');
+      }
+    </script>
+  </body>
+</html>
