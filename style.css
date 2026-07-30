@@ -151,6 +151,9 @@ label .close_btn {
 .hero_section {
     min-height: 100vh;
     background-image: url("hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero_container {
@@ -755,7 +758,10 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(11, 17, 32, 0.98); 
+        background-image: url("hero-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         backdrop-filter: blur(10px);
         position: fixed;
         top: 0;
